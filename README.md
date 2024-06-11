@@ -1,7 +1,7 @@
 # Graf-neuronske-mreze
 ### Tablica 1. 
 ## GCN za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
-| Learning rate   | Weight   | Accuracy |
+| *Learning rate*   | Weight   | Accuracy |
 | -------------   | ------   | -------- |
 | 0.1             | 0.1      | 0.7250   |
 | 0.1             | 0.01      | 0.6910   |
