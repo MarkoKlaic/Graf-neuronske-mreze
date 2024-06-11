@@ -1,9 +1,7 @@
 # Graf neuronske mreže
 U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u Google Colabu koristeći Pytorch library. Radili smo klasifikaciju čvorova te klasifikaciju grafa čija je preciznost uz različite parametre prikazana kroz tablice.
 * [Introduction](#introduction)
-
-## Introduction
-
+* 
 ### Tablica 1. 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
 | *Learning rate*   | *Weight decay*   | *Accuracy* |
@@ -87,3 +85,7 @@ U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u 
 | 0.0001            | 0.01      | 0.7895   |
 | 0.0001            | 0.001      | 0.7895   |
 | 0.0001            | 0.0001      | 0.7895   |
+
+
+
+## Introduction
