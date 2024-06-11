@@ -51,7 +51,7 @@ U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u 
 | 0.0001            | 0.001      | 0.6290   |
 | 0.0001            | 0.0001      | 0.6340   |
 
-### <ins>Tablica 3.<id="tablica3"></ins>
+### <ins>Tablica 3. <a class="anchor" id="tablica3"></a></ins>
 ## GCNConv za klasifikaciju grafa s obzirom na različite hiperparametre (22 epohe)
 | *Learning rate*   | *Weight decay*   | *Accuracy* |
 | -------------   | ------   | -------- |
@@ -72,7 +72,7 @@ U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u 
 | 0.0001            | 0.001      | 0.7895   |
 | 0.0001            | 0.0001      | 0.7895   |
 
-### <ins>Tablica 4.<id="tablica4"></ins> 
+### <ins>Tablica 4. <a class="anchor" id="tablica4"></a></ins> 
 ## GraphConv za klasifikaciju grafa s obzirom na različite hiperparametre (22 epohe)
 | *Learning rate*   | *Weight decay*   | *Accuracy* |
 | -------------   | ------   | -------- |
