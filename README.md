@@ -9,7 +9,7 @@ U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u 
     
 ## Uvod
 ## Tablice
-### <ins>Tablica 1.<id="tablica1"></ins> 
+### <ins>Tablica 1. <id="tablica1"></ins> 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
 | *Learning rate*   | *Weight decay*   | *Accuracy* |
 | -------------   | ------   | -------- |
