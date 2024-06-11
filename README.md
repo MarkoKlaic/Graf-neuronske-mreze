@@ -1,2 +1,3 @@
 # Graf-neuronske-mreze
-## graf
+| Learning rate   | Weight   | Accuracy |
+| -------------   | ------   | -------- |
