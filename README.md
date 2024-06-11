@@ -1,4 +1,4 @@
-# Graf-neuronske-mreze
+# Graf neuronske mreže
 ### Tablica 1. 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
 | *Learning rate*   | *Weight decay*   | *Accuracy* |
