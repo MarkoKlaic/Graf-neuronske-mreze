@@ -11,7 +11,7 @@ U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u 
     
 ## Uvod
 Za početak ćemo definirati što je to zapravo graf. Graf $G = (V,E)$ je definiran skupom čvorova $V$ i skupom bridova $E$ između tih čvorova. Brid koji ide od čvora $u$ do čvora $v$ označavamo s $(u,v)$. Graf može imati usmjerene ili neusmjerene bridove. Prikladan način za predstavljanje grafova jest matrica susjedstva 
-$A$ $\in$ $R$<sup>(|V| * |V|)</sup>. Tada svaki čvor indeksira određeni redak i stupac u matrici susjedstva. Na taj način možemo prisutnost brida između 2 čvora predstaviti jedinicom, a odsutnost brida nulom. Odnosno, ako postoji brid između čvora u i v onda vrijedi A[u,v] = 1, a u protivnom vrijedi A[u,v] = 0.
+$A$ $\in$ $R$<sup>$(|V| * |V|)$</sup>. Tada svaki čvor indeksira određeni redak i stupac u matrici susjedstva. Na taj način možemo prisutnost brida između 2 čvora predstaviti jedinicom, a odsutnost brida nulom. Odnosno, ako postoji brid između čvora u i v onda vrijedi A[u,v] = 1, a u protivnom vrijedi A[u,v] = 0.
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
