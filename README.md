@@ -1,5 +1,6 @@
 # Graf neuronske mreže
 ![](gnnslika.webp)
+
 U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u Google Colabu koristeći Pytorch library. Radili smo klasifikaciju čvorova te klasifikaciju grafa čija je preciznost uz različite parametre prikazana kroz tablice.
 * [Uvod](#uvod)
 * [Tablice](#tablice)
