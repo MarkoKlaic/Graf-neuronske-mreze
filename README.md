@@ -1,7 +1,6 @@
 # Graf neuronske mreže
 ![](gnnslika.webp)
 
-U ovom radu bavili smo se graf neuronskim mrežama. Implementacija je rađena u Google Colabu koristeći Pytorch library. Radili smo klasifikaciju čvorova te klasifikaciju grafa čija je preciznost uz različite parametre prikazana kroz tablice.
 * [Uvod](#uvod)
 * [Tablice](#tablice)
   * [Tablica 1.](#tablica1)
@@ -15,7 +14,7 @@ složenih sustava. Općenito, možemo reći da je to skup objekata, odnosno čvo
 godina, došlo je do dramatičnog povećanja količine i kvalitete grafički strukturiranih podataka koji su dostupni istraživačima. Izazov je otključati potencijal tog mnoštva podataka. Kao što smo već spomenuli, graf $G = (V, E)$ je definiran skupom čvorova $V$ i skupom bridova $E$ između tih čvorova. Brid koji ide od čvora $u$ do čvora $v$ označavamo s $(u,v)$. Graf može imati usmjerene ili neusmjerene bridove. Prikladan način za predstavljanje grafova jest matrica susjedstva 
 $A$ $\in$ $\mathbb{R}$<sup>$(|V| * |V|)$</sup>. Tada svaki čvor indeksira određeni redak i stupac u matrici susjedstva. Na taj način možemo prisutnost brida između 2 čvora predstaviti jedinicom, a odsutnost brida nulom. Odnosno, ako postoji brid između čvora $u$ i $v$ onda vrijedi $A[u,v] = 1$, a u protivnom vrijedi $A[u,v] = 0$.
 ## Projekt
-U ovom projektu bavili smo se graf neuronskim mrežama. Implementacija je rađena u Google Colabu koristeći Pytorch library. Radili smo klasifikaciju čvorova te klasifikaciju grafa čija je preciznost uz različite parametre prikazana kroz tablice.
+Cilj ovog projekta je klasifikacija čvorova grafa te klasifikacija samog grafa korištenjem graf neuronskih mreža. U projektu je korištena biblioteka PyTorch Geometric. Implementirano je nekoliko modela čiji su rezultati prikazani u tablicama. U modelima smo koristili različite konvolucijske slojeve, te različite parametre (learning rate te weight decay), pri čemu smo dobivali različite rezultate ovisno o svim tim svojstvima.
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
