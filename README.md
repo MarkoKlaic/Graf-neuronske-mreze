@@ -146,7 +146,36 @@ train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 ```
 
+Onda smo krenuli implementirati prvi model za Graph Classification.
+```python
+from torch.nn import Linear
+from torch_geometric.nn import global_mean_pool
 
+
+class GCNGraph(torch.nn.Module):
+    def __init__(self, hidden_channels):
+        super(GCNGraph, self).__init__()
+        torch.manual_seed(12345)
+        self.conv1 = GCNConv(dataset.num_node_features, hidden_channels)
+        self.conv2 = GCNConv(hidden_channels, hidden_channels)
+        self.conv3 = GCNConv(hidden_channels, hidden_channels)
+        self.lin = Linear(hidden_channels, dataset.num_classes)
+
+    def forward(self, x, edge_index, batch):
+
+        x = self.conv1(x, edge_index)
+        x = x.relu()
+        x = self.conv2(x, edge_index)
+        x = x.relu()
+        x = self.conv3(x, edge_index)
+
+        x = global_mean_pool(x, batch)
+
+        x = F.dropout(x, p=0.5, training=self.training)
+        x = self.lin(x)
+
+        return x
+```
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
