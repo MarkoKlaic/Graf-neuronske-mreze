@@ -125,7 +125,7 @@ dataset = TUDataset(root='data/TUDataset', name='MUTAG')
 
 Nakon učitavanja skupa podataka smo još ispisali neke osnovne stvari koje su dio tog skupa.
 
-![](gnnslika.webp)
+![](GraphClassification.png)
 
 
 
