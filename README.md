@@ -113,6 +113,8 @@ class GraphNode(torch.nn.Module):
         return F.log_softmax(x, dim=1)
 ```
 
+Treniranje modela, računanje i ispisivanje rezultata smo radili kao i u prošlom primjeru, ponovo za 11 epoha.
+
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
