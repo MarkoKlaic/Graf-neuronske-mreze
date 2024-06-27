@@ -182,6 +182,8 @@ class GCNGraph(torch.nn.Module):
         return x
 ```
 
+Sada stvaramo model, te implementiramo funkcije za treniranje i testiranje.
+
 ```python
 model = GCNGraph(hidden_channels=64)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
@@ -208,6 +210,23 @@ def test(loader):
      return correct / len(loader.dataset)
 ```
 
+Nakon tog nam naravno ostaje samo izračunati kvalitetu modela za različite parametre, te ispisati rezultate.
+
+```python
+learning_rates = [0.1,0.01,0.001,0.0001]
+weight_decays = [0.1,0.01,0.001,0.0001]
+for learning_rate in learning_rates:
+  for weight_decay in weight_decays:
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, weight_decay = weight_decay)
+    print(f'Learning_rate: {learning_rate}, weight_decay: {weight_decay}')
+    print('=============================================================')
+    print()
+    for epoch in range(1, 12):
+      train()
+      train_acc = test(train_loader)
+      test_acc = test(test_loader)
+      print(f'Epoch: {epoch:03d}, Train Acc: {train_acc:.4f}, Test Acc: {test_acc:.4f}')
+```
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
