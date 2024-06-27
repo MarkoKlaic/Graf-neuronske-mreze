@@ -2,17 +2,17 @@
 ![](gnnslika.webp)
 
 * [Uvod](#uvod)
-* [Tablice](#tablice)
-  * [Tablica 1.](#tablica1)
-  * [Tablica 2.](#tablica2)
-  * [Tablica 3.](#tablica3)
-  * [Tablica 4.](#tablica4)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
   * [GCNNode](#gcnnode)
   * [GraphNode](#graphnode)
   * [GCNGraph](#gcngraph)
   * [GraphGraph](#graphgraph)
+* [Tablice](#tablice)
+  * [Tablica 1.](#tablica1)
+  * [Tablica 2.](#tablica2)
+  * [Tablica 3.](#tablica3)
+  * [Tablica 4.](#tablica4)
 ## Uvod
 Za početak ćemo definirati što je to zapravo graf. Grafovi su sveprisutna struktura podataka i univerzalni jezik za opisivanje
 složenih sustava. Općenito, možemo reći da je to skup objekata, odnosno čvorova, zajedno s njihovim interakcijama, odnosno bridovima. Oni nude matematičku osnovu koju možemo nadograditi kako bi mogli analizirati, razumjeti te učiti iz složenih sustava stvarnog svijeta. U zadnjih dvadeset i pet
