@@ -18,6 +18,8 @@ $A$ $\in$ $\mathbb{R}$<sup>$(|V| * |V|)$</sup>. Tada svaki čvor indeksira odre�
 Cilj ovog projekta je klasifikacija čvorova grafa te klasifikacija samog grafa korištenjem graf neuronskih mreža. U projektu je korištena biblioteka PyTorch Geometric. Implementirano je nekoliko modela čiji su rezultati prikazani u tablicama. U modelima smo koristili različite konvolucijske slojeve, te različite parametre (learning rate te weight decay), pri čemu smo dobivali različite rezultate ovisno o svim tim svojstvima.
 
 ## Kod
+Za početak projekta smo prvo morali instalirati torch-geometric library te importati sve potrebne stvari koje će nam poslužiti prilikom stvaranja modela.
+
 ```python
 !pip install torch-geometric
 import torch
