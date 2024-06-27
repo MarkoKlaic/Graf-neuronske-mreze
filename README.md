@@ -41,7 +41,7 @@ Nakon učitavanja skupa podataka smo još ispisali neke osnovne stvari koje su d
 
 ![](NodeClassification.png)
 
-Nakon tog smo krenuli u implementiranje prvog modela. 
+Nakon tog smo krenuli u implementiranje prvog modela. Koristili smo GCNConv layer te ReLU kao aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
 
 ```python
 class GCNNode(torch.nn.Module):
@@ -60,6 +60,7 @@ class GCNNode(torch.nn.Module):
 
         return F.log_softmax(x, dim=1)
 ```
+
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
