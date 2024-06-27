@@ -8,6 +8,7 @@
   * [Tablica 3.](#tablica3)
   * [Tablica 4.](#tablica4)
 * [Projekt](#Projekt)
+* [Kod](#Kod)
 ## Uvod
 Za početak ćemo definirati što je to zapravo graf. Grafovi su sveprisutna struktura podataka i univerzalni jezik za opisivanje
 složenih sustava. Općenito, možemo reći da je to skup objekata, odnosno čvorova, zajedno s njihovim interakcijama, odnosno bridovima. Oni nude matematičku osnovu koju možemo nadograditi kako bi mogli analizirati, razumjeti te učiti iz složenih sustava stvarnog svijeta. U zadnjih dvadeset i pet
@@ -15,6 +16,8 @@ godina, došlo je do dramatičnog povećanja količine i kvalitete grafički str
 $A$ $\in$ $\mathbb{R}$<sup>$(|V| * |V|)$</sup>. Tada svaki čvor indeksira određeni redak i stupac u matrici susjedstva. Na taj način možemo prisutnost brida između 2 čvora predstaviti jedinicom, a odsutnost brida nulom. Odnosno, ako postoji brid između čvora $u$ i $v$ onda vrijedi $A[u,v] = 1$, a u protivnom vrijedi $A[u,v] = 0$.
 ## Projekt
 Cilj ovog projekta je klasifikacija čvorova grafa te klasifikacija samog grafa korištenjem graf neuronskih mreža. U projektu je korištena biblioteka PyTorch Geometric. Implementirano je nekoliko modela čiji su rezultati prikazani u tablicama. U modelima smo koristili različite konvolucijske slojeve, te različite parametre (learning rate te weight decay), pri čemu smo dobivali različite rezultate ovisno o svim tim svojstvima.
+
+## Kod
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
