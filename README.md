@@ -93,7 +93,7 @@ for learning_rate in learning_rates:
       print(f'Epoch: {epoch:03d}, Test Acc: {test_acc:.4f}')
 ```
 
-Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom primjeru ReLU aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
+Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom modelu ReLU aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
 
 ```python
 class GraphNode(torch.nn.Module):
@@ -227,6 +227,35 @@ for learning_rate in learning_rates:
       test_acc = test(test_loader)
       print(f'Epoch: {epoch:03d}, Train Acc: {train_acc:.4f}, Test Acc: {test_acc:.4f}')
 ```
+
+Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom modelu ReLU aktivacijsku funkciju, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
+
+```python
+class GraphGraph(torch.nn.Module):
+    def __init__(self, hidden_channels):
+        super(GraphGraph, self).__init__()
+        torch.manual_seed(12345)
+        self.conv1 = GraphConv(dataset.num_node_features, hidden_channels)
+        self.conv2 = GraphConv(hidden_channels, hidden_channels)
+        self.conv3 = GraphConv(hidden_channels, hidden_channels)
+        self.lin = Linear(hidden_channels, dataset.num_classes)
+
+    def forward(self, x, edge_index, batch):
+        x = self.conv1(x, edge_index)
+        x = x.relu()
+        x = self.conv2(x, edge_index)
+        x = x.relu()
+        x = self.conv3(x, edge_index)
+
+        x = global_mean_pool(x, batch)
+
+        x = F.dropout(x, p=0.5, training=self.training)
+        x = self.lin(x)
+
+        return x
+```
+
+Treniranje modela, računanje i ispisivanje rezultata smo radili kao i u prošlom primjeru, ponovo za 22 epohe.
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
