@@ -123,6 +123,8 @@ from torch_geometric.datasets import TUDataset
 dataset = TUDataset(root='data/TUDataset', name='MUTAG')
 ```
 
+
+
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
 ## GCNConv za klasifikaciju čvorova s obzirom na različite hiperparametre (11 epoha)
