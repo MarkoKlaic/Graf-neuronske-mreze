@@ -45,7 +45,7 @@ Nakon učitavanja skupa podataka smo još ispisali neke osnovne stvari koje su d
 
 ![](NodeClassification.png)
 
-Nakon tog smo krenuli u implementiranje prvog modela. Koristili smo GCNConv layer te ReLU kao aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
+Nakon tog smo krenuli u implementiranje prvog modela. Koristili smo GCNConv layer te ReLU kao aktivacijsku funkciju. Za ReLU vrijedi $ReLU(x)=max(x,0)$. Na kraju smo ispisali softmax distribuciju preko broja klasa.
 
 ### <ins> GCNNode <a class="anchor" id="gcnnode"></a></ins>
 
