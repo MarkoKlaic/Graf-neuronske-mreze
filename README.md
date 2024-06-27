@@ -60,6 +60,35 @@ class GCNNode(torch.nn.Module):
 
         return F.log_softmax(x, dim=1)
 ```
+Iza tog smo trenirali model na trening podacima za 11 epoha te ispisali rezultate.
+
+```python
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = GCNNode().to(device)
+print(model)
+data = dataset[0].to(device)
+
+learning_rates = [0.1,0.01,0.001,0.0001]
+weight_decays = [0.1,0.01,0.001,0.0001]
+for learning_rate in learning_rates:
+  for weight_decay in weight_decays:
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, weight_decay = weight_decay)
+    model.train()
+    print(f'Learning_rate: {learning_rate}, weight_decay: {weight_decay}')
+    print('=============================================================')
+    print()
+    for epoch in range(1, 12):
+      optimizer.zero_grad()
+      out = model(data)
+      loss = F.nll_loss(out[data.train_mask], data.y[data.train_mask])
+      loss.backward()
+      optimizer.step()
+      model.eval()
+      pred = model(data).argmax(dim=1)
+      correct = (pred[data.test_mask] == data.y[data.test_mask]).sum()
+      test_acc = int(correct) / int(data.test_mask.sum())
+      print(f'Epoch: {epoch:03d}, Test Acc: {test_acc:.4f}')
+```
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
