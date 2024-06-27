@@ -9,7 +9,7 @@
   * [Tablica 4.](#tablica4)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
-  * [GCNNode](#g-c-n-n-ode)
+  * [GCNNode](#g-c-n-node)
   * [GraphNode](#GraphNode)
   * [GCNGraph](#GCNGraph)
   * [GraphGraph](#GraphGraph)
