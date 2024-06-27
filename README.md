@@ -127,6 +127,16 @@ Nakon učitavanja skupa podataka smo još ispisali neke osnovne stvari koje su d
 
 ![](GraphClassification.png)
 
+Zatim smo malo promiješali dataset te uzeli prvih 150 grafova kao trening grafove, a ostatak za testiranje.
+
+```python
+torch.manual_seed(12345)
+dataset = dataset.shuffle()
+
+train_dataset = dataset[:150]
+test_dataset = dataset[150:]
+```
+
 
 
 
