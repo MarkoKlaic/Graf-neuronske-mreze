@@ -19,9 +19,12 @@ Cilj ovog projekta je klasifikacija čvorova grafa te klasifikacija samog grafa 
 
 ## Kod
 ```python
-run = client.beta.threads.runs.create_and_poll(
-    thread_id=thread.id,
-    assistant_id=assistant.id,
+!pip install torch-geometric
+import torch
+import torch.nn.functional as F
+
+from torch_geometric.nn import GCNConv
+from torch_geometric.nn import GraphConv
 )
 ```
 
