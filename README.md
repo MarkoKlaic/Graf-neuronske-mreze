@@ -32,6 +32,12 @@ from torch_geometric.nn import GraphConv
 
 Prvo smo radili Node Classification u kojem smo učitali CiteSeer dataset. To je skup podataka koji se sastoji od 3312 znanstvenih publikacija razvrstanih u jednu od šest klasa. Citatnu mrežu čine 4732 poveznice. Svaka objava u skupu podataka opisana je vektorom riječi s vrijednosti 0/1 koji označava odsutnost/prisutnost odgovarajuće riječi iz rječnika. Rječnik se sastoji od 3703 jedinstvene riječi. 
 
+```python
+from torch_geometric.datasets import Planetoid
+
+dataset = Planetoid(root='/tmp/CiteSeer', name='CiteSeer')
+```
+
 ![](NodeClassification.png)
 
 
