@@ -9,6 +9,10 @@
   * [Tablica 4.](#tablica4)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
+  * [GCNNode](#GCNNode)
+  * [GraphNode](#GraphNode)
+  * [GCNGraph](#GCNGraph)
+  * [GraphGraph](#GraphGraph)
 ## Uvod
 Za početak ćemo definirati što je to zapravo graf. Grafovi su sveprisutna struktura podataka i univerzalni jezik za opisivanje
 složenih sustava. Općenito, možemo reći da je to skup objekata, odnosno čvorova, zajedno s njihovim interakcijama, odnosno bridovima. Oni nude matematičku osnovu koju možemo nadograditi kako bi mogli analizirati, razumjeti te učiti iz složenih sustava stvarnog svijeta. U zadnjih dvadeset i pet
@@ -31,6 +35,8 @@ from torch_geometric.nn import GraphConv
 ```
 
 Prvo smo radili Node Classification u kojem smo učitali CiteSeer dataset. To je skup podataka koji se sastoji od 3312 znanstvenih publikacija razvrstanih u jednu od šest klasa. Citatnu mrežu čine 4732 poveznice. Svaka objava u skupu podataka opisana je vektorom riječi s vrijednosti 0/1 koji označava odsutnost/prisutnost odgovarajuće riječi iz rječnika. Rječnik se sastoji od 3703 jedinstvene riječi. 
+
+### <ins><a class="anchor" id="GCNNode"></a></ins>
 
 ```python
 from torch_geometric.datasets import Planetoid
