@@ -256,6 +256,7 @@ class GraphGraph(torch.nn.Module):
 ```
 
 Treniranje modela, računanje i ispisivanje rezultata smo radili kao i u prošlom primjeru, ponovo za 22 epohe.
+U nastavku se mogu vidjeti rezultati svih ovih modela na skupovima podataka koje smo koristili.
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
