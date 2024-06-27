@@ -37,6 +37,7 @@ from torch_geometric.datasets import Planetoid
 
 dataset = Planetoid(root='/tmp/CiteSeer', name='CiteSeer')
 ```
+Nakon učitavanja skupa podataka smo još ispisali neke osnovne stvari koje su dio tog skupa.
 
 ![](NodeClassification.png)
 
