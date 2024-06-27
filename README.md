@@ -60,7 +60,10 @@ class GCNNode(torch.nn.Module):
 
         return F.log_softmax(x, dim=1)
 ```
+
+
 Iza tog smo trenirali model na trening podacima za 11 epoha te ispisali rezultate pri čemu smo mijenjali svojstva (learning_rate i weight_decay).
+
 
 ```python
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
