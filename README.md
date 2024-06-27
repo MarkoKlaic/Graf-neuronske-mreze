@@ -137,6 +137,14 @@ train_dataset = dataset[:150]
 test_dataset = dataset[150:]
 ```
 
+Nakon tog smo iskoristili DataLoader koji nam nudi Pytorch Geometric kako bi grupirali manje grafove u jedan veliki graf kako bi imali punu iskoristivost GPU-a.
+
+```python
+from torch_geometric.loader import DataLoader
+
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+```
 
 
 
