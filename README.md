@@ -150,7 +150,7 @@ Onda smo krenuli implementirati prvi model za klasifikaciju grafa. U prvom model
 
 U literaturi postoji više slojeva očitavanja (readout layera), ali najčešće uzimamo prosjek ugrađenih čvorova.
 
-Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu.
+Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu. Opet koristimo ReLU aktivacijsku funkciju za dobivanje lokaliziranih ugrađivanja čvorova, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
 
 ```python
 from torch.nn import Linear
@@ -181,6 +181,33 @@ class GCNGraph(torch.nn.Module):
 
         return x
 ```
+
+```python
+model = GCNGraph(hidden_channels=64)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+criterion = torch.nn.CrossEntropyLoss()
+
+def train():
+    model.train()
+
+    for data in train_loader:
+         out = model(data.x, data.edge_index, data.batch)
+         loss = criterion(out, data.y)
+         loss.backward()
+         optimizer.step()
+         optimizer.zero_grad()
+
+def test(loader):
+     model.eval()
+
+     correct = 0
+     for data in loader:
+         out = model(data.x, data.edge_index, data.batch)
+         pred = out.argmax(dim=1)
+         correct += int((pred == data.y).sum())
+     return correct / len(loader.dataset)
+```
+
 
 ## Tablice
 ### <ins>Tablica 1. <a class="anchor" id="tablica1"></a></ins> 
