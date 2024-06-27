@@ -62,7 +62,7 @@ class GCNNode(torch.nn.Module):
 ```
 
 
-Iza tog smo trenirali model na trening podacima za 11 epoha te ispisali rezultate pri čemu smo mijenjali svojstva (learning_rate i weight_decay).
+Iza tog smo trenirali model na trening podacima za 11 epoha pri čemu smo mijenjali svojstva (learning_rate i weight_decay). Izračunali smo rezultate, a zatim ih i ispisali.
 
 
 ```python
@@ -91,6 +91,26 @@ for learning_rate in learning_rates:
       correct = (pred[data.test_mask] == data.y[data.test_mask]).sum()
       test_acc = int(correct) / int(data.test_mask.sum())
       print(f'Epoch: {epoch:03d}, Test Acc: {test_acc:.4f}')
+```
+
+Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom primjeru ReLU aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
+
+```
+class GraphNode(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv1 = GraphConv(dataset.num_node_features, 16)
+        self.conv2 = GraphConv(16, dataset.num_classes)
+
+    def forward(self, data):
+        x, edge_index = data.x, data.edge_index
+
+        x = self.conv1(x, edge_index)
+        x = F.relu(x)
+        x = F.dropout(x, training=self.training)
+        x = self.conv2(x, edge_index)
+
+        return F.log_softmax(x, dim=1)
 ```
 
 ## Tablice
