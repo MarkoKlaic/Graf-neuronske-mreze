@@ -147,6 +147,11 @@ test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 ```
 
 Onda smo krenuli implementirati prvi model za klasifikaciju grafa. U prvom modelu smo koristili GCNConv layer. Treniranje modela za klasifikaciju grafa obično ide na način da prvo ugradimo svaki čvor tako što napravimo više krugova prosljeđivanja poruka (tzv. message passing), nakon tog radimo ugrađivanje skupnih čvorova u ujedinjeno ugrađivanje grafa (tzv. readout layer), te na kraju treniramo završni klasifikator na ugrađivanju grafa.
+
+U literaturi postoji više slojeva očitavanja (readout layera), ali najčešće uzimamo prosjek ugrađenih čvorova.
+
+Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu.
+
 ```python
 from torch.nn import Linear
 from torch_geometric.nn import global_mean_pool
