@@ -10,9 +10,9 @@
 * [Projekt](#Projekt)
 * [Kod](#Kod)
   * [GCNNode](#gcnnode)
-  * [GraphNode](#GraphNode)
-  * [GCNGraph](#GCNGraph)
-  * [GraphGraph](#GraphGraph)
+  * [GraphNode](#graphnode)
+  * [GCNGraph](#gcngraph)
+  * [GraphGraph](#graphgraph)
 ## Uvod
 Za početak ćemo definirati što je to zapravo graf. Grafovi su sveprisutna struktura podataka i univerzalni jezik za opisivanje
 složenih sustava. Općenito, možemo reći da je to skup objekata, odnosno čvorova, zajedno s njihovim interakcijama, odnosno bridovima. Oni nude matematičku osnovu koju možemo nadograditi kako bi mogli analizirati, razumjeti te učiti iz složenih sustava stvarnog svijeta. U zadnjih dvadeset i pet
@@ -100,6 +100,7 @@ for learning_rate in learning_rates:
 ```
 
 Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom modelu ReLU aktivacijsku funkciju. Na kraju smo ispisali softmax distribuciju preko broja klasa.
+### <ins> GraphNode <a class="anchor" id="graphnode"></a></ins>
 
 ```python
 class GraphNode(torch.nn.Module):
@@ -157,6 +158,8 @@ Onda smo krenuli implementirati prvi model za klasifikaciju grafa. U prvom model
 U literaturi postoji više slojeva očitavanja (readout layera), ali najčešće uzimamo prosjek ugrađenih čvorova.
 
 Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu. Opet koristimo ReLU aktivacijsku funkciju za dobivanje lokaliziranih ugrađivanja čvorova, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
+
+### <ins> GCNGraph <a class="anchor" id="gcngraph"></a></ins>
 
 ```python
 from torch.nn import Linear
@@ -235,6 +238,9 @@ for learning_rate in learning_rates:
 ```
 
 Nakon što smo završili s prvim modelom, napravili smo drugi u kom smo koristili GraphConv layer te kao u prošlom modelu ReLU aktivacijsku funkciju, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
+
+### <ins> GraphGraph <a class="anchor" id="graphgraph"></a></ins>
+
 
 ```python
 class GraphGraph(torch.nn.Module):
