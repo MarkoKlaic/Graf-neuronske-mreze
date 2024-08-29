@@ -1,5 +1,8 @@
 # Graf neuronske mreže
 ![](gnnslika.webp)
+\documentclass{article}
+\usepackage{amssymb}
+\begin{document}
 * [Uvod](#uvod)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
@@ -354,4 +357,4 @@ U nastavku se mogu vidjeti rezultati svih ovih modela na skupovima podataka koje
 | 0.0001            | 0.01      | 0.7895   |
 | 0.0001            | 0.001      | 0.7895   |
 | 0.0001            | 0.0001      | 0.7895   |
-
+\end{document}
