@@ -1,6 +1,6 @@
 # Graf neuronske mreže
 ![](gnnslika.webp)
-
+\usepackage{amsfonts}
 * [Uvod](#uvod)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
