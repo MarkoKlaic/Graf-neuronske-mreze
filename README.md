@@ -1,8 +1,8 @@
-# Graf neuronske mreže
-![](gnnslika.webp)
 \documentclass{article}
 \usepackage{amssymb}
 \begin{document}
+# Graf neuronske mreže
+![](gnnslika.webp)
 * [Uvod](#uvod)
 * [Projekt](#Projekt)
 * [Kod](#Kod)
