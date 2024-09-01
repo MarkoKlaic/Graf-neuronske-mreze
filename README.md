@@ -219,7 +219,7 @@ def test(loader):
      return correct / len(loader.dataset)
 ```
 
-Nakon tog nam naravno ostaje samo izračunati kvalitetu modela za različite parametre, te ispisati rezultate.
+Nakon tog nam naravno ostaje samo izračunati kvalitetu modela za različite parametre, te ispisati rezultate, ovaj put za 22 epohe.
 
 ```python
 learning_rates = [0.1,0.01,0.001,0.0001]
