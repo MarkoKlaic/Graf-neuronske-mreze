@@ -153,11 +153,11 @@ train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 ```
 
-Onda smo krenuli implementirati prvi model za klasifikaciju grafa. U prvom modelu smo koristili GCNConv layer. Treniranje modela za klasifikaciju grafa obično ide na način da prvo ugradimo svaki čvor tako što napravimo više krugova prosljeđivanja poruka (tzv. message passing), nakon tog radimo ugrađivanje skupnih čvorova u ujedinjeno ugrađivanje grafa (tzv. readout layer), te na kraju treniramo završni klasifikator na ugrađivanju grafa.
+Onda smo krenuli implementirati prvi model za klasifikaciju grafa. U prvom modelu smo koristili GCNConv layer. Treniranje modela za klasifikaciju grafa obično ide na način da prvo ugradimo svaki čvor tako što napravimo više krugova prosljeđivanja poruka (tzv. message passing), nakon tog radimo ugradnju skupnih čvorova u ujedinjenu ugradnju grafa (tzv. readout layer), te na kraju treniramo završni klasifikator na ugradnji grafa.
 
 U literaturi postoji više slojeva očitavanja (readout layera), ali najčešće uzimamo prosjek ugrađenih čvorova.
 
-Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu. Opet koristimo ReLU aktivacijsku funkciju za dobivanje lokaliziranih ugrađivanja čvorova, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
+Svu ovu funkcionalnost Pytorch Geometric pruža kroz global_mean_pool funkciju koja uzima ugradnje svih čvorova iz mini-batcheva te batch vectore za izračunavanje ugradnje grafova za svaki graf u batchu. Opet koristimo ReLU aktivacijsku funkciju za dobivanje lokaliziranih ugradnji čvorova, a onda koristimo konačni klasifikator na vrhu sloja za očitavanje grafa.
 
 ### <ins> GCNGraph <a class="anchor" id="gcngraph"></a></ins>
 
