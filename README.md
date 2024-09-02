@@ -1,6 +1,6 @@
 # Graf neuronske mreže
 <p align="right">Student : Marko Klaić</p>
-<p align="right">Mentor : dr.sc. Jurica Maltar</p>
+<p align="right">Mentor : dr. sc. Jurica Maltar</p>
 
 ![](gnnslika.webp)
 * [Uvod](#uvod)
