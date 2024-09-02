@@ -122,7 +122,7 @@ class GraphNode(torch.nn.Module):
 
 Treniranje modela, računanje i ispisivanje rezultata smo radili kao i u prošlom primjeru, ponovo za 11 epoha.
 
-Nakon dva modela za Node Classification, napravili smo dva modela i za Graph Classification. Za početak smo učitali MUTAG dataset. Konkretno, MUTAG je zbirka nitroaromatskih spojeva i cilj je predvidjeti njihovu mutagenost na Salmonella typhimurium. Ulazni grafovi koriste se za predstavljanje kemijskih spojeva, gdje vrhovi predstavljaju atome i označeni su vrstom atoma, dok rubovi između vrhova predstavljaju veze između odgovarajućih atoma. Uključuje 188 uzoraka kemijskih spojeva sa 7 diskretnih oznaka čvorova.
+Nakon dva modela za Node Classification, napravili smo dva modela i za Graph Classification. Za početak smo učitali MUTAG dataset. Konkretno, MUTAG je zbirka nitroaromatskih spojeva i cilj je predvidjeti njihovu mutagenost na Salmonella typhimurium. Ulazni grafovi koriste se za predstavljanje kemijskih spojeva, gdje čvorovi predstavljaju atome i označeni su vrstom atoma, dok bridovi između čvorova predstavljaju veze između odgovarajućih atoma. Uključuje 188 uzoraka kemijskih spojeva sa 7 diskretnih oznaka čvorova.
 
 ```python
 from torch_geometric.datasets import TUDataset
