@@ -1,5 +1,6 @@
 # Graf neuronske mreže
 <p align="right">Marko Klaić</p>
+
 ![](gnnslika.webp)
 * [Uvod](#uvod)
 * [Projekt](#Projekt)
